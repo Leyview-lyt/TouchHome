@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    
+    <string name="auth">认证模式</string>
+   <string name="encry"> 加密方式</string>
+    <string name="tip_again">再按一次退出程序！</string>
+     <string name="next">下一步</string>
+    <string name="app_name">TouchHome</string>
+    <string name="area">区域</string>
+    <string name="plan">计划</string>
+    <string name="more">更多</string>
+    <string name="device">设备</string>
+    <string name="edit">编辑</string>
+    <string name="scene">场景</string>
+     <string name="happen_in">发生在:</string>
+     <string name="time">时间:</string>
+     <string name="repeat">重复</string>
+	<string name="norepeat">不重复</string>
+	<string name="tip_setting_date">设置时间</string>
+	<string name="save">保存</string>
+	<string name="cancel">取消</string>
+	
+	
+	<string name="setting">设置</string>
+	<string name="setting_device">设置设备</string>
+	<string name="document">文档</string>
+	<string name="help_document">帮助文档</string>
+    <string name="info">说明</string>
+	<string name="version_information">版本信息</string>
+	<string name="account_number">账号:</string>
+	<string name="tip_setting_name">请输入路由器账号</string>
+	<string name="password">密码:</string>
+	<string name="tip_setting_pwd">请输入密码</string>
+	<string name="update_type">修改类型:</string>
+    <string name="send">发送</string>
+    <string name="setting_name_last">Touch Home +</string>
+    <string name="setting_num_last">版本号：</string>
+    <string name="setting_url_last">网    址：</string>
+    <string name="setting_email_last">邮    箱：</string>
+    <string name="no_seatch_device">没有搜索到设备，请刷新重试！</string>
+    <string name="tip_select_device">请选择需要操作的设备！</string>
+    <string name="send_success">发送成功！请稍候刷新数据！</string>
+    
+    <string name="home_floor_room">楼房/房间</string>
+    <string name="menu">菜单</string>
+    <string name="addarea">新增区域</string>
+    <string name="back">返回</string>
+    <string name="tip_input_roomName">请输入房间名字</string>
+    <string name="update">修改</string>
+    <string name="addNewRoom">添加新房间</string>
+    <string name="tip_roomName_isUse">该房间名字已存在</string>
+    <string name="tip_floorName_empty">名字不能为空</string>  
+    <string name="confirm">确定</string> 
+    <string name="tip">你确定要删除该项吗？</string> 
+    <string name="delete_room">删除房间</string> 
+    <string name="tip_device_name_nouse">设备名字不可用</string>
+    <string name="home_binDevice">绑定设备</string>
+    <string name="has_been_bound">已被绑定</string>
+    <string name="open">打开</string>
+    <string name="close">关闭</string>
+    <string name="name">名称</string>
+    <string name="tip_name">请输入名称</string>
+    <string name="fade_time">渐变时间</string>
+    <string name="hold_time">保持时间</string>
+    <string name="brightness">亮度</string>
+    <string name="add_new">新增</string>
+    <string name="tip_name_isuse">该名称已存在！</string>
+    <string name="tip_name_empty">自定义名称不能为空！</string>
+    <string name="tip_update_success">修改成功</string>
+    <string name="tip_save_success">保存成功</string>
+    <string name="tip_custom_overproof">每个设备最多只能定义10个动态模式</string>
+    <string name="tip_title">温馨提示</string>
+    <string name="tip_del_custom">您确定要删除该自定义颜色吗？</string>
+    <string name="delete">删除</string>
+    <string name="speed">速度</string>
+    <string name="custom">自定义</string>
+    <string name="colour_temperature">色温</string>
+    <string name="warm_colour">暖色</string>
+    <string name="cool_colour">冷色</string>
+    <string name="home_device">设备</string>
+    <string name="tip_edit_scene_device">编辑场景设备</string>
+    <string name="home_setting">控制台</string>
+    <string name="read_status_error">读取状态失败！</string>
+    <string name="tip_Unbound">该设备未绑定，是否需要绑定?</string>
+     
+    
+    
+    <string name="mon">一</string>
+	<string name="tue">二</string>
+	<string name="wed">三</string>
+	<string name="thu">四</string>
+	<string name="fri">五</string>
+	<string name="sat">六</string>
+	<string name="sun">日</string>
+	<string name="everyday">每天</string>
+    
+    
+    
+    
+    <string name="model_m1">静态红色</string>
+    <string name="model_m2">静态蓝色</string>
+    <string name="model_m3">静态绿色</string>
+    <string name="model_m4">静态青色</string>
+    <string name="model_m5">静态紫色</string>
+    <string name="model_m6">静态黄色</string>
+    <string name="model_m7">静态白色</string>
+    <string name="model_m8">三色跳变</string>
+    <string name="model_m9">七色跳变</string>
+    <string name="model_m10">三色渐变</string>
+    <string name="model_m11">七色渐变</string>
+    <string name="model_m12">红色频闪</string>
+    <string name="model_m13">蓝色频闪</string>
+    <string name="model_m14">紫色频闪</string>
+    <string name="model_m15">绿色频闪</string>
+    <string name="model_m16">黄色频闪</string>
+    <string name="model_m17">青色频闪</string>
+    <string name="model_m18">白色频闪</string>
+    <string name="model_m19">红蓝交替渐变</string>
+    <string name="model_m20">蓝绿交替渐变</string>
+    <string name="model_m21">绿红交替渐变</string>
+    
+    
+    
+	<string name="menu_settings">Settings</string>
+    <string name="me">我的</string>
+</resources>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="7"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:background="@color/aliceblue"
+                android:orientation="vertical"
+                 >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+	                android:layout_height="0dp"
+	                android:layout_weight="1"
+
+	                android:orientation="horizontal"
+	                android:gravity="center_vertical"
+	                android:background="#33cccc" >
+
+                    <TextView
+                        android:id="@+id/title_device"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="@string/home_device"
+                        android:textStyle="normal"
+                        android:textSize="20sp"
+						android:textColor="@color/white"/>
+                </LinearLayout>
+				<LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+               		 android:layout_weight="3"
+                    android:orientation="horizontal" >
+           <!--       <HorizontalScrollView
+                    android:id="@+id/horizontalScrollView1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" 
+                    android:scrollbars="none" > -->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="horizontal" >
+
+                        <GridView
+                            android:id="@+id/gridView0"
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:columnWidth="80dp"
+                            android:horizontalSpacing="10dp"
+                            android:numColumns="auto_fit"
+                            android:stretchMode="columnWidth"
+                            android:verticalSpacing="10dp" >
+
+                        </GridView>
+                    </LinearLayout>
+          <!--       </HorizontalScrollView> --> 
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+              
+                android:layout_weight="6.85"
+                android:background="@color/aliceblue"
+                android:orientation="vertical"
+                 >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+	                android:layout_height="0dp"
+	                android:layout_weight="1"
+	                android:orientation="horizontal"
+	                android:gravity="center_vertical"
+	                android:background="#33cccc" >
+
+                    <TextView
+                        android:id="@+id/title_console"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="@string/home_setting"
+                        android:textStyle="normal"
+                        android:textSize="20sp"
+						android:textColor="@color/white"/>
+                    <View 
+			            android:layout_width="0dp"
+			            android:layout_height="fill_parent"
+			            android:layout_weight="1"
+		            />
+                    <TextView
+	                    android:id="@+id/plan_txt_status"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:text="@string/read_status_error"
+	                    android:visibility="invisible"
+	                    android:textColor="@color/red"
+	                    android:textSize="16sp" />
+	                 <View 
+			            android:layout_width="0dp"
+			            android:layout_height="fill_parent"
+			            android:layout_weight="3"
+		            />   
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/scene_console"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+               		android:layout_weight="9">
+                	<phonehome.leynew.com.phenehome.plan.MyViewPager
+                	    android:id="@+id/plan_home_vp"
+                	    android:layout_width="fill_parent"
+                	    android:layout_height="fill_parent" >
+                	</phonehome.leynew.com.phenehome.plan.MyViewPager>
+					<ImageButton
+						android:id="@+id/plan_vp_left"
+						android:layout_gravity="left|center"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:background="@drawable/arrow_l" />
+
+					<ImageButton
+						android:id="@+id/plan_vp_right"
+						android:layout_gravity="right|center"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:background="@drawable/arrow_r" />
+
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+        
+    <Button 
+        android:id="@+id/save_pd"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:textSize="20sp"
+        android:background="@drawable/btn_default"
+       />
+    
+
+</LinearLayout>

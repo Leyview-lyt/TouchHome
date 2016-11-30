@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/relativeLayout4"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+
+            <GridView
+                android:scrollbars="none"
+                android:id="@+id/gridView"
+                android:layout_width="@dimen/x280"
+                android:layout_height="fill_parent"
+                android:listSelector="#00ffffff">
+            </GridView>
+
+
+            <ImageButton
+                android:id="@+id/bt_refresh"
+                android:layout_width="@dimen/x30"
+                android:layout_height="@dimen/x30"
+                android:layout_gravity="right"
+                android:background="@drawable/reload"
+                android:focusable="false" />
+        </FrameLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="@dimen/x10"
+            android:paddingRight="@dimen/x5"
+            android:paddingTop="@dimen/x5">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="账 号："
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/account"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:hint="@string/tip_setting_name"></EditText>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="@dimen/x10"
+            android:paddingRight="@dimen/x5"
+            android:paddingTop="@dimen/x5">
+
+            <TextView
+                android:id="@+id/TextView02"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="密 码："
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:ems="10"
+                android:hint="请输入路由器密码" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/x10">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout9"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/y35"
+                android:paddingLeft="@dimen/x10"
+                android:paddingTop="@dimen/x10">
+
+                <TextView
+
+                    android:id="@+id/renzheng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text="auth"
+                    android:textSize="18sp" />
+
+                <RadioGroup
+                    android:id="@+id/auth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/renzheng"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/wpapsk"
+                        android:layout_width="@dimen/x100"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:paddingLeft="@dimen/x20"
+                        android:text=":   WPAPSK">
+
+                    </RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/wpa2psk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:paddingLeft="@dimen/x20"
+                        android:text="WPA2PSK">
+
+                    </RadioButton>
+                </RadioGroup>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout10"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/y35"
+                android:paddingLeft="@dimen/x10">
+
+                <TextView
+                    android:id="@+id/jiamifangshi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="encry"
+                    android:textSize="18sp" />
+
+                <RadioGroup
+                    android:id="@+id/encry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/jiamifangshi"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/tkip"
+                        android:layout_width="@dimen/x100"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:paddingLeft="@dimen/x20"
+                        android:text=":   TKIP">
+
+                    </RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/aes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:paddingLeft="@dimen/x20"
+                        android:text="AES">
+
+                    </RadioButton>
+                </RadioGroup>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_update_type"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/y80">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <include
+                    android:id="@+id/wf"
+                    layout="@layout/me_searchdivice_tupe1"
+
+                    />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Button
+
+        android:id="@+id/bt_send"
+        android:layout_width="@dimen/x200"
+        android:layout_height="@dimen/y30"
+        android:layout_marginBottom="@dimen/y20"
+        android:layout_marginTop="@dimen/x15"
+        android:background="@drawable/user_banner_bg"
+        android:text="@string/send"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
+</LinearLayout>

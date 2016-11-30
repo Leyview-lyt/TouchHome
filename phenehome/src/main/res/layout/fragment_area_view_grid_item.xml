@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="@color/white"
+    android:orientation="vertical" 
+    >
+
+	<RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:focusable="false"
+	    android:addStatesFromChildren="true" >
+        <ImageView
+            android:id="@+id/gridview_item_img"
+            android:layout_width="@dimen/x70"
+			android:layout_height="@dimen/x70"
+            android:layout_centerInParent="true"
+			/>
+
+        <ImageView
+            android:id="@+id/update_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/gridview_item_img"
+            android:src="@drawable/edit"
+			android:visibility="gone"
+            />
+        <ImageView
+            android:id="@+id/delete_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/gridview_item_img"
+            android:layout_below="@id/update_room"
+            android:src="@drawable/delete"
+			android:visibility="gone"
+            />
+	</RelativeLayout>
+
+        <TextView
+			android:hint="hhh"
+            android:id="@+id/room_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+   <!--   </LinearLayout> -->
+
+</LinearLayout>

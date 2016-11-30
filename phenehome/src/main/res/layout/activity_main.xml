@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="phonehome.leynew.com.phenehome.MainActivity">
+
+    <include
+        android:id="@+id/id_Area_Top"
+        layout="@layout/me_searchdivece"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/id_Area_Tottom"
+        />
+
+
+
+    <!--方案1 -->
+    <include
+        android:gravity="center"
+        android:id="@+id/id_Area_Tottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/view_bottom"
+        android:layout_alignParentBottom="true"
+        />
+    <!--方案2
+        <include
+            android:gravity="center"
+            android:id="@+id/id_Area_Tottom"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/y50"
+            layout="@layout/bottom_menu"
+            android:layout_alignParentBottom="true"
+            />
+
+      -->
+</RelativeLayout>

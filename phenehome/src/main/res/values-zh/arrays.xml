@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sa">
+        <item> </item>
+		<item> 添加区域</item>
+		<item> 修改区域</item>
+		<item> 删除区域</item>
+		<item> 确定完成</item>
+	</string-array>
+	
+     <string-array name="sb">
+         <item > </item>
+		<item> 添加设备</item>
+		<item> 修改设备</item>
+		<item> 删除设备</item>
+		<item> 确定完成</item>
+	</string-array>
+	
+	<string-array name="sc">
+        <item ></item>
+		<item> 添加场景</item>
+		<item> 修改场景</item>
+		<item> 删除场景</item>
+		<item> 确定完成</item>
+	</string-array>
+
+	<string-array name="sd">
+		<item> 搜索设备</item>
+		<item> 产品说明</item>
+		<item> 版本信息</item>
+	</string-array>
+
+
+</resources>

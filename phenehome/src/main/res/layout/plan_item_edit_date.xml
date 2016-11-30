@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:background="#33cccc"
+            android:orientation="vertical" >
+
+            <TextView 
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/tip_setting_date"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:gravity="center"/>
+            
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="180dp"
+            android:background="@color/lightgray"
+            android:gravity="center" >
+
+            <TimePicker
+                android:id="@+id/timePicker1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:timePickerMode="spinner"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp" 
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/repeat"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/edit_date_mon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/textfield_default"
+                android:text="@string/mon"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/edit_date_tue"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+
+                android:layout_alignBottom="@+id/edit_date_mon"
+                android:layout_marginLeft="2dp"
+                android:layout_toRightOf="@+id/edit_date_mon"
+                android:background="@drawable/textfield_default"
+                android:text="@string/tue"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/edit_date_wed"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignBottom="@+id/edit_date_tue"
+                android:layout_marginLeft="2dp"
+                android:layout_toRightOf="@+id/edit_date_tue"
+                android:background="@drawable/textfield_default"
+                android:text="@string/wed"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/edit_date_thu"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignBottom="@+id/edit_date_wed"
+                android:layout_marginLeft="2dp"
+                android:layout_toRightOf="@+id/edit_date_wed"
+                android:background="@drawable/textfield_default"
+                android:text="@string/thu"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/edit_date_sun"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignBottom="@+id/edit_date_sat"
+                android:layout_toLeftOf="@+id/edit_date_thu"
+                android:background="@drawable/textfield_default"
+                android:text="@string/sun"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/edit_date_sat"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/edit_date_mon"
+                android:layout_toRightOf="@+id/edit_date_mon"
+                android:background="@drawable/textfield_default"
+                android:layout_marginLeft="2dp"
+                android:text="@string/sat"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/edit_date_fri"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignLeft="@+id/edit_date_mon"
+                android:layout_below="@+id/edit_date_mon"
+                android:background="@drawable/textfield_default"
+                android:text="@string/fri"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/y50"
+        android:background="@color/lightgray"
+        android:orientation="horizontal"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/edit_date_cancel"
+            android:layout_width="@dimen/x100"
+            android:layout_height="@dimen/y35"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="14dp"
+            android:background="@color/white"
+            android:text="@string/cancel"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/edit_date_save"
+            android:layout_width="@dimen/x100"
+            android:layout_height="@dimen/y35"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/edit_date_cancel"
+            android:background="@color/white"
+            android:text="@string/save"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

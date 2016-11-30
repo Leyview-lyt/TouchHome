@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="phonehome.leynew.com.phenehome.MainActivity">
+
+    <item
+        android:id="@+id/action_AddDevice"
+        android:orderInCategory="100"
+        android:title="AddDevice"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_ModifyDevice"
+        android:orderInCategory="100"
+        android:title="ModifyDevice"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_DelDevice"
+        android:orderInCategory="100"
+        android:title="DelDevice"
+        app:showAsAction="never" />
+</menu>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="80dp"
+        android:layout_height="84dp"
+        
+        android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/custom_popup_edit"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                
+                    android:text="@string/edit"
+                    android:textSize="18sp"
+                    android:textColor="@drawable/popup_btn_color"
+                    android:background="@drawable/pop_btn_round"
+                     />
+                
+                <RelativeLayout 
+                    android:id="@+id/relativeLayout1"
+                    android:layout_below="@+id/custom_popup_edit"
+                    android:background="#FFFFFFFF"
+                    android:layout_width="fill_parent"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_height="2dp">
+                </RelativeLayout>
+                
+                <Button
+                    android:id="@+id/custom_popup_delete"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    
+                    android:layout_below="@+id/relativeLayout1"
+                    android:text="@string/delete"
+                    android:textSize="18sp"
+                    android:textColor="@drawable/popup_btn_color"
+                    android:background="@drawable/pop_btn_round"
+                    />
+                
+            </RelativeLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>

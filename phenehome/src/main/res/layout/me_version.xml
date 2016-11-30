@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <include
+        android:gravity="center"
+        android:id="@+id/id_Area_Top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/view_top"
+        android:layout_alignParentBottom="true"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/welcome_pic"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/id_me_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Touch Home +"
+            android:textSize="40sp"/>
+        <TextView
+            android:layout_marginTop="@dimen/y10"
+            android:id="@+id/id_me_vesion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="版本号：V 2.0       "
+            android:textSize="20sp"
+            android:layout_below="@+id/id_me_text"
+            android:layout_alignStart="@+id/id_me_text" />
+    </RelativeLayout>
+</LinearLayout>

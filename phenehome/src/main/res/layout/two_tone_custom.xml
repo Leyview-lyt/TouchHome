@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" 
+    android:gravity="center">
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2.17"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp" 
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal" >
+     <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="8"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+        
+    <LinearLayout
+        android:id="@+id/relativeLayout01"
+        android:layout_width="250dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.99"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cool_colour"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" : "
+            android:textSize="18sp" />
+
+        <SeekBar
+            android:id="@+id/two_custom_sb_cool"
+            android:layout_width="200dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:progressDrawable="@drawable/seekbar_style"
+            android:thumb="@drawable/sliderbar" />
+
+        <TextView
+            android:id="@+id/two_custom_txt_cool"
+            android:layout_width="@dimen/x60"
+            android:layout_height="wrap_content"
+            android:text="100%"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/relativeLayout02"
+        android:layout_width="250dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+		<TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/warm_colour"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" : "
+            android:textSize="18sp" />
+
+       
+
+        <SeekBar
+            android:id="@+id/two_custom_sb_warm"
+            android:layout_width="200dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            
+            android:max="100"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:progressDrawable="@drawable/seekbar_style"
+            android:thumb="@drawable/sliderbar" />
+		 <TextView
+            android:id="@+id/two_custom_txt_warm"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="100%"
+            android:textSize="16sp" />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/relativeLayout03"
+       android:layout_width="250dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/brightness"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" : "
+            android:textSize="18sp" />
+
+        <SeekBar
+            android:id="@+id/two_custom_sb_brs"
+            android:layout_width="200dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+           
+            android:max="100"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:progressDrawable="@drawable/seekbar_style"
+            android:thumb="@drawable/sliderbar" />
+        
+         <TextView
+            android:id="@+id/two_custom_txt_brs"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="100%"
+            android:textSize="16sp" />
+    </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="match_parent"
+        
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+       <View 
+           android:layout_width="match_parent"
+        	android:layout_weight="1"
+       		 android:layout_height="0dp"
+           />
+        <LinearLayout
+        android:id="@+id/two_custom_rl"
+        android:layout_width="match_parent"
+        android:layout_weight="2"
+        android:layout_height="0dp"
+        
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@color/green">
+            <TextView
+                android:id="@+id/two_custom_txt_color"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="100_100_100"
+                android:textSize="16sp" />
+	</LinearLayout>
+	<View 
+           android:layout_width="match_parent"
+        	android:layout_weight="1"
+       		 android:layout_height="0dp"
+           />
+    </LinearLayout>
+</LinearLayout>
+
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="20dp"></LinearLayout>
+	 <LinearLayout
+        
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+		android:layout_weight="1"
+         >
+    
+    <GridView
+        android:id="@+id/two_custom_gv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       	android:columnWidth="180dp"
+       	android:gravity="center"
+       	android:horizontalSpacing="10dp"
+       	android:verticalSpacing="10dp" 
+        android:numColumns="1" >
+    </GridView>
+</LinearLayout>
+    
+    </LinearLayout>
+     
+    
+</LinearLayout>

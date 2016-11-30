@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/two_custom_item_rl"
+   android:layout_width="120dp"
+   android:layout_height="100dp"
+   android:background="@color/green"
+    android:orientation="vertical" 
+    android:gravity="center">
+    
+       <TextView
+         android:id="@+id/two_custom_txt_color"
+         android:layout_width="100dp"
+  		 android:layout_height="wrap_content"
+         android:gravity="center"
+         android:textSize="16sp"
+         android:text="100_100_100" />
+   
+
+</LinearLayout>

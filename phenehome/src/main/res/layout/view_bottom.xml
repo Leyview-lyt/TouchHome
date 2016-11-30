@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:radioButton="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/bottom"
+    android:paddingTop="@dimen/y2"
+    android:paddingBottom="@dimen/y2"
+    android:background="@color/white"
+    >
+
+
+    <RadioGroup
+        android:id="@+id/id_Area_Group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/white"
+
+       >
+
+        <phonehome.leynew.com.phenehome.view.MyRadioButton1
+            android:checked="true"
+            android:id="@+id/id_Area_0"
+            android:background="@color/white"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/area"
+            android:textColor="@drawable/bottom_text"
+            android:button="@null"
+            android:gravity="center"
+            radioButton:drawableSize="30dp"
+            radioButton:drawableTop="@drawable/bottom_area"/>
+
+        <phonehome.leynew.com.phenehome.view.MyRadioButton1
+            android:id="@+id/id_Area_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/plan"
+            android:textColor="@drawable/bottom_text"
+            android:button="@null"
+            android:gravity="center"
+            radioButton:drawableSize="30dp"
+            radioButton:drawableTop="@drawable/bottom_plan"/>
+        <phonehome.leynew.com.phenehome.view.MyRadioButton1
+            android:id="@+id/id_Area_2"
+            android:text="@string/me"
+            android:textColor="@drawable/bottom_text"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            radioButton:drawableSize="30dp"
+            radioButton:drawableTop="@drawable/bottom_me"
+            />
+    </RadioGroup>
+
+
+</LinearLayout>

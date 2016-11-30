@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:radioButton="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:myradio="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+
+
+    <RadioGroup
+        android:id="@+id/wfRadioGroup"
+        android:layout_marginLeft="@dimen/x20"
+        android:layout_marginRight="@dimen/x20"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <phonehome.leynew.com.phenehome.view.MyRadioButton
+            android:id="@+id/wf400a"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:text="WF400A"
+            radioButton:drawableSize="50dp"
+            radioButton:drawableBottom="@drawable/type_a"
+
+            />
+        <phonehome.leynew.com.phenehome.view.MyRadioButton
+            android:id="@+id/wf400b"
+            android:gravity="center"
+
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="WF400B"
+            android:button="@null"
+            radioButton:drawableSize="50dp"
+            radioButton:drawableBottom="@drawable/type_b"
+            />
+        <phonehome.leynew.com.phenehome.view.MyRadioButton
+            android:id="@+id/wf400c"
+            android:text="WF400C"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            radioButton:drawableSize="50dp"
+            radioButton:drawableBottom="@drawable/type_c"
+            />
+
+
+    </RadioGroup>
+
+
+
+</LinearLayout>

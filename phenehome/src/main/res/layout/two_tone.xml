@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/two_tone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+  	    android:paddingLeft="5dp"
+        android:orientation="vertical" >
+		
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp" 
+            android:layout_weight="1"
+            android:gravity="center">
+            <TextView android:id="@+id/textView1" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"  
+                android:text="@string/brightness" 
+                android:textSize="20sp" />
+       
+        </LinearLayout>
+		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp" 
+            android:layout_weight="9"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical" 
+                android:gravity="center">
+				<View android:layout_width="match_parent"
+				    android:layout_height="0dp"
+				    android:layout_weight="1"/>
+                <Button
+                    android:id="@+id/two_btn_brs_open"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/btn_click_bg"
+                    android:text="@string/open"
+                    android:textSize="18sp" />
+				<View android:layout_width="match_parent"
+				    android:layout_height="0dp"
+				    android:layout_weight="1"/>
+                <Button
+                    android:id="@+id/two_btn_brs_up"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/btn_up_click_bg"
+                    android:textColor="@drawable/popup_btn_color"
+                    android:textSize="18sp" />
+				<View android:layout_width="match_parent"
+				    android:layout_height="0dp"
+				    android:layout_weight="1"/>
+                <Button
+                    android:id="@+id/two_btn_brs_down"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/btn_down_click_bg"
+                    android:textColor="@drawable/popup_btn_color"
+                    android:textSize="18sp" />
+				<View android:layout_width="match_parent"
+				    android:layout_height="0dp"
+				    android:layout_weight="1"/>
+                <Button
+                    android:id="@+id/two_btn_brs_close"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/btn_click_bg"
+                    android:text="@string/close"
+                    android:textSize="18sp" />
+                <View android:layout_width="match_parent"
+				    android:layout_height="0dp"
+				    android:layout_weight="1"/>
+        </LinearLayout>
+
+		    <LinearLayout
+		        android:layout_width="wrap_content"
+		        android:layout_height="match_parent"
+		        android:gravity="center"
+		        android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/two_txt_brs"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="100%"
+                    android:textSize="16sp"
+                     />
+
+                <phonehome.leynew.com.phenehome.control.VerticalSeekBar
+                    android:id="@+id/two_sb_brs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="220dp"
+                    android:max="100"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/seekbar_style"
+                    android:thumb="@drawable/sliderbar" />
+           
+        </LinearLayout>
+		    
+        </LinearLayout>
+    </LinearLayout>
+
+    
+	
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent" 
+        android:paddingRight="5dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp" 
+            android:layout_weight="1" 
+            android:gravity="center">
+             <TextView android:id="@+id/textView2" 
+                 android:layout_width="wrap_content" 
+                 android:layout_height="wrap_content" 
+                 android:text="@string/colour_temperature" 
+                 android:textSize="20sp" />
+    
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="9"
+            android:layout_height="0dp" 
+            android:orientation="horizontal"
+            android:gravity="center"
+			>
+            
+             <LinearLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="match_parent"
+                 android:gravity="center"
+                 android:orientation="vertical" >
+
+                <TextView 
+                    android:id="@+id/two_txt_warm" 
+                    android:layout_width="50dp"
+                     android:layout_height="wrap_content" 
+                     android:gravity="center" 
+                     android:text="100%" 
+                     android:textSize="16sp" 
+                    />
+               
+
+                <phonehome.leynew.com.phenehome.control.VerticalSeekBar
+                    android:id="@+id/two_sb_warm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="220dp"
+                    android:max="100"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/seekbar_style"
+                    android:thumb="@drawable/sliderbar" />
+                
+        </LinearLayout>
+           
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical" 
+                android:gravity="center">
+				<View android:layout_width="match_parent"
+				    android:layout_height="0dp"
+				    android:layout_weight="1"/>
+            <Button android:id="@+id/two_btn_warm_open" 
+                android:layout_width="80dp" 
+                android:layout_height="30dp"  
+                android:background="@drawable/btn_click_bg" 
+                android:text="@string/warm_colour" 
+                android:textSize="18sp" />
+				<View android:layout_width="match_parent"
+				    android:layout_height="0dp"
+				    android:layout_weight="1"/>
+                <Button android:id="@+id/two_btn_warm_up"
+                     android:layout_width="80dp" 
+                     android:layout_height="30dp" 
+                     android:background="@drawable/btn_up_click_bg" 
+                     android:textColor="@drawable/popup_btn_color" 
+                     android:textSize="18sp" />
+                <View android:layout_width="match_parent"
+				    android:layout_height="0dp"
+				    android:layout_weight="1"/>
+
+                <Button android:id="@+id/two_btn_warm_down" 
+                    android:layout_width="80dp"
+                     android:layout_height="30dp" 
+                     android:background="@drawable/btn_down_click_bg" 
+                     android:textColor="@drawable/popup_btn_color" 
+                     android:textSize="18sp" />
+                <View android:layout_width="match_parent"
+				    android:layout_height="0dp"
+				    android:layout_weight="1"/>
+
+                <Button
+                    android:id="@+id/two_btn_warm_close"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/btn_click_bg"
+                    android:text="@string/cool_colour"
+                    android:textSize="18sp" />
+                <View android:layout_width="match_parent"
+				    android:layout_height="0dp"
+				    android:layout_weight="1"/>
+            
+        </LinearLayout>
+            
+        </LinearLayout>
+    </LinearLayout>
+
+    
+</LinearLayout>

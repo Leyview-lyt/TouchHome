@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+   
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#33cccc">
+    	<Button 
+            android:id="@+id/back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="@string/back"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:background="#33cccc"/>
+        
+        <TextView 
+            android:id="@+id/dialog_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.0"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/add_floor_save" 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:background="#33cccc"/>
+    
+    </LinearLayout>
+    
+    <RelativeLayout
+        android:id="@+id/add_floor_rl_edit"
+        android:layout_width="match_parent"
+        android:layout_height="98dp"
+      >
+
+        <ImageView
+            android:id="@+id/add_floor_pic"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp" />
+
+        <EditText
+            android:id="@+id/add_floor_name"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/add_floor_pic"
+            android:lines="1"
+            android:hint="输入所选区域的名字"
+            android:maxLength="20" />
+
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+      
+        android:background="@color/antiquewhite" >
+    </LinearLayout>
+    
+    <GridView
+        android:id="@+id/add_floor_gv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:stretchMode="columnWidth"
+        android:numColumns="4" >
+    </GridView>
+
+</LinearLayout>

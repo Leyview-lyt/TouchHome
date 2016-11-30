@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include
+        android:gravity="center"
+        android:id="@+id/id_Area_Top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/view_top"
+        android:layout_alignParentBottom="true"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/welcome_pic">
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+
+            android:text="App产品说明：
+1、软件功能组成：通过选定区域并绑定设备，连接WF或路由器实现对灯光亮度的控制。
+2、首页使用listview显示数据以及复用convertView对view进行复用，提高系统运行效率，对view中组件使用holder类提高效率。
+3、数据库存储数据。
+4、更新UI界面，优化用户与界面之间的交互，提高软件的整体可操作性。
+5、修改SeekBar调整亮度的功能。
+6、使用Socket协议实现通信。" />
+    </LinearLayout>
+
+</LinearLayout>

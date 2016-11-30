@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sa">
+        <item></item>
+		<item>AddArea</item>
+		<item>Update</item>
+		<item>Delete</item>
+		<item>Finish</item>
+	</string-array>
+	
+     <string-array name="sb">
+         <item ></item>
+		<item>AddDevice</item>
+		<item>Update</item>
+		<item>Delete</item>
+		<item>Finish</item>
+	</string-array>
+	
+      <string-array name="sc">
+         <item ></item>
+		<item>AddScene</item>
+		<item>Update</item>
+		<item>Delete</item>
+		<item>Finish</item>
+	</string-array>
+
+	<string-array name="sd">
+		<item> Search Device</item>
+		<item> Product State</item>
+		<item> Version Massage</item>
+	</string-array>
+
+
+
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <include
+        android:gravity="center"
+        android:id="@+id/id_Area_Top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/view_top"
+        android:layout_alignParentBottom="true"
+        />
+
+    <LinearLayout
+        android:padding="@dimen/x5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:padding="@dimen/x5"
+            android:id="@+id/id_AddRoom_Image"
+            android:layout_width="@dimen/x100"
+            android:layout_height="@dimen/x100"
+            android:src="@drawable/d1"
+            />
+
+
+        <EditText
+            android:layout_marginRight="@dimen/x5"
+            android:gravity="left|bottom"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/id_editName"
+            style="@style/AppTheme.NoActionBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Room Name"/>
+    </LinearLayout>
+
+    <GridView
+        android:padding="@dimen/y10"
+        android:id="@+id/id_Area_GridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="3"
+        android:layout_above="@+id/id_Area_Tottom"
+        android:layout_below="@+id/id_Area_Top">
+
+    </GridView>
+</LinearLayout>

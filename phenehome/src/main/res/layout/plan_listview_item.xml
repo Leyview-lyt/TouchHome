@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/x5">
+
+
+    <TextView
+        android:layout_marginTop="@dimen/y3"
+        android:id="@+id/plan_item_txt_plan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="计划1"
+
+        android:textColor="@color/red" />
+
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_alignLeft="@+id/plan_item_txt_plan"
+        android:layout_below="@+id/plan_item_txt_plan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y3"
+        android:orientation="horizontal">
+        <TextView
+            android:gravity="center"
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发生在："
+            android:textSize="18sp" />
+        <TextView
+            android:gravity="center"
+            android:id="@+id/id_plan_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="一 二 三 四 五 六"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:gravity="center"
+        android:layout_alignBottom="@+id/plan_item_btn_on"
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/time"
+        android:textSize="18sp"
+        android:layout_marginTop="@dimen/y3"
+        android:layout_below="@+id/linearlayout"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:gravity="center"
+        android:layout_alignBottom="@+id/plan_item_btn_on"
+        android:layout_marginLeft="@dimen/x5"
+        android:layout_marginTop="@dimen/y3"
+        android:id="@+id/plan_item_txt_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00 : 00"
+        android:textColor="@color/darkred"
+        android:textSize="18sp"
+        android:layout_below="@+id/linearlayout"
+        android:layout_toEndOf="@+id/textView3" />
+
+
+    <Button
+        android:layout_marginTop="@dimen/y3"
+        android:id="@+id/plan_item_btn_on"
+        android:layout_width="@dimen/x55"
+        android:layout_height="@dimen/x30"
+        android:layout_below="@+id/plan_item_btn_edit"
+
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/x5"
+        android:background="@drawable/plan_off" />
+
+    <Button
+        android:layout_marginRight="@dimen/x5"
+        android:id="@+id/plan_item_btn_edit"
+        android:layout_width="@dimen/x40"
+        android:layout_height="@dimen/x30"
+
+        android:layout_alignStart="@+id/plan_item_btn_on"
+        android:layout_alignTop="@+id/plan_item_txt_plan"
+        android:background="@drawable/edit_plan" />
+
+
+</RelativeLayout>
