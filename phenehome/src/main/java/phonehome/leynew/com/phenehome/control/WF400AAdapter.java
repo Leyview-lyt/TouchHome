@@ -220,7 +220,7 @@ public class WF400AAdapter extends PagerAdapter implements
                                 "1_255_18_0_1.00_0.8_0.8",
                                 "0",
                                 "0",
-                        //更新到github
+                        //更新到github..
                         },
                         device.getLamp().getL_sequence());
 
