@@ -206,20 +206,22 @@ public class WF400AAdapter extends PagerAdapter implements
                     Util.sendCommand(cust, null, null);
                 }
             } else {
-                Util.sendCommand(
-                        LeyNew.CALL_7SAE,
-                        new String[]{(tccs.get(position).getT_custom() - 1) + ""},
-                        device.getLamp().getL_sequence());
+//                Util.sendCommand(
+//                        LeyNew.CALL_7SAE,
+//                        new String[]{(tccs.get(position).getT_custom() - 1) + ""},
+//                        device.getLamp().getL_sequence());
                 Log.i("==========", "发送");
                 Util.sendCommand(
                         LeyNew.CALL_7SAE,
                         new String[]{
                                 "1",
+                                "1_0_50_255_1.00_1.2_1.5",
+                                "1_0_255_34_1.00_1.0_1.1",
+                                "1_255_18_0_1.00_0.8_0.8",
                                 "0",
-                                "0_50_255_0.70_1.2_1.5",
-                                "0_255_34_1.00_1.0_1.1",
-                                "255_18_0_1.00_0.8_0.8",
+                                "0",
 
+                                "0"
                         },
                         device.getLamp().getL_sequence());
 
@@ -515,11 +517,7 @@ public class WF400AAdapter extends PagerAdapter implements
         });
     }
 
-//	Runnable showCurPointColor = new Runnable(){
-//		public void run() {
-//			popupWindow.showAtLocation(color, Gravity.NO_GRAVITY, x + p_off_width, y + p_off_height);
-//		}
-//	};
+
 
     public void onProgressChanged(SeekBar seekBar, int progress,
                                   boolean fromUser) {
@@ -544,7 +542,7 @@ public class WF400AAdapter extends PagerAdapter implements
             case R.id.three_model_sb_speed:
                 txt_speed.setText(progress + "%");
                 if (device.getLamp().getL_type().equals("Zigbee")) {
-                    //zigbee���õ��ٶ�
+
                     String sp = Util.integer2HexString(progress);
                     String gflag = "00";
                     String setSpeed = LeyNew.SETSP + gflag + device.getLamp().getL_sequence() + sp + LeyNew.END;
