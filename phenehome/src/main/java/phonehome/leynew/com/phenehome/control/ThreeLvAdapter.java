@@ -32,18 +32,19 @@ public class ThreeLvAdapter extends BaseAdapter{
 	private Context context;
 	private List<ThreeColourCustom> list = new ArrayList<ThreeColourCustom>();    //
 	private Handler handler;
-	private FragmentManager manager;
+
 	private Device device;
 	private boolean isAddNew;
-	
+	private boolean IsEdit;
+
 	public ThreeLvAdapter(Context context, List<ThreeColourCustom> list, Handler handler,
-			Device device, FragmentManager manager, boolean isAddNew){
+			Device device, boolean IsEdit, boolean isAddNew){
 		super();
 		this.context = context;
 		this.list = list;
 		this.handler = handler;
 		this.device = device;
-		this.manager = manager;
+		this.IsEdit = IsEdit;
 		this.isAddNew = isAddNew;
 	}
 
@@ -79,7 +80,7 @@ public class ThreeLvAdapter extends BaseAdapter{
 		}
 		TextView name = (TextView) convertView.findViewById(R.id.three_custom_item_txt_name);
 		final ImageButton edit = (ImageButton)convertView.findViewById(R.id.three_custom_item_imgbtn_edit);
-		if (manager==null){
+		if (!IsEdit){
 			edit.setVisibility(View.GONE);
 		}
 		//
@@ -162,9 +163,10 @@ public class ThreeLvAdapter extends BaseAdapter{
 				edit.setOnClickListener(new OnClickListener() {
 					public void onClick(View v){
 						pw.dismiss();
-						System.out.println("");
-						ThreeDialogFragment dialog = new ThreeDialogFragment(context, device, list.get(position), handler);
-						dialog.show(manager, "addNew");
+						// TODO: 2016/12/1/001
+						AddThreeCustomDialog dialog = new AddThreeCustomDialog(context, device, list.get(position), handler);
+						dialog.show();
+
 					}
 				});
 				delete.setOnClickListener(new OnClickListener(){

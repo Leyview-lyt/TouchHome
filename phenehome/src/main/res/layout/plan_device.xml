@@ -151,7 +151,8 @@
         android:layout_height="wrap_content"
         android:text="@string/save"
         android:textSize="20sp"
-        android:background="@drawable/btn_default"
+        android:layout_marginTop="@dimen/x2"
+		android:background="@color/aliceblue"
        />
     
 

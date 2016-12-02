@@ -26,7 +26,7 @@
 
 	<string-array name="sd">
 		<item> Search Device</item>
-		<item> Product State</item>
+		<item> Connect Wifi</item>
 		<item> Version Massage</item>
 	</string-array>
 

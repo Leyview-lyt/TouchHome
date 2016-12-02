@@ -45,8 +45,7 @@ public class WF400CAdapter extends PagerAdapter implements OnClickListener,
 		this.context = context;
 		this.list = list;
 		this.device = device;
-	//	executerChildThreadSendInfomation();
-	//	sendInfoTarget = SendInfo.getSendInfoTarget();
+
 	}
 	
 	public int getCount(){

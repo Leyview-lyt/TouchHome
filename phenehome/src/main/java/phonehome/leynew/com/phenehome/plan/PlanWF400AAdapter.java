@@ -240,7 +240,7 @@ public class PlanWF400AAdapter extends PagerAdapter implements
                 }
             }
         }
-        adapter = new ThreeLvAdapter(context, tccs, handler, device, manager,
+        adapter = new ThreeLvAdapter(context, tccs, handler, device, false,
                 false);
         custom_lv.setAdapter(adapter);
         if (manager == null) {
@@ -467,8 +467,7 @@ public class PlanWF400AAdapter extends PagerAdapter implements
                     } else {
                         new Thread() {
                             public void run() {
-                                if (device.getLamp().getL_type()
-                                        .equals("Zigbee")) {
+                                if (device.getLamp().getL_type().equals("Zigbee")) {
                                     String ido = "01";
                                     String sepan = LeyNew.SETCH
                                             + LeyNew.FLAG
@@ -491,7 +490,8 @@ public class PlanWF400AAdapter extends PagerAdapter implements
                             }
                         }.start();
                     }
-                } else if (action == MotionEvent.ACTION_UP) {
+                }
+                else if (action == MotionEvent.ACTION_UP) {
                     if (null != device.getLamp().getL_type()
                             && device.getLamp().getL_type().equals("WF323")) {
                         if (255 == red)

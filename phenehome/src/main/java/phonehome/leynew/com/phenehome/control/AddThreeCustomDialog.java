@@ -291,7 +291,7 @@ public class AddThreeCustomDialog extends Dialog implements
 				tcc.setList(tcss);
 				tcc.setT_name(n);
 				tcc.setD_id(device.get_id());
-				ThreeColourCustom t = db.save(tcc);  //  ���ｫ��Ϣ���浽���ݿ���ȥ
+				ThreeColourCustom t = db.save(tcc);  //
 				tcc.set_id(t.get_id());
 				tcc.setT_custom(t.getT_custom());
 				Toast.makeText(context,
@@ -380,7 +380,7 @@ public class AddThreeCustomDialog extends Dialog implements
 			Util.sendMessage(handler, null);
 			this.dismiss();
 			break;
-		case R.id.three_addcustom_btn_cancel:// ȡ��
+		case R.id.three_addcustom_btn_cancel://
 			this.dismiss();
 			break;
 		case R.id.three_addcustom_ll_row1_column1:

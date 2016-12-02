@@ -74,9 +74,8 @@ public class WF400AAdapter extends PagerAdapter implements
 
     private ListView custom_lv;
     private Button custom_btn;
-    @SuppressLint("NewApi")
-    private FragmentManager manager;
-    private ThreeLvAdapter adapter;
+
+    private phonehome.leynew.com.phenehome.control.ThreeLvAdapter adapter;
     private List<ThreeColourCustom> tccs = new ArrayList<ThreeColourCustom>();
     private boolean isAddNew = false;//
 
@@ -90,7 +89,6 @@ public class WF400AAdapter extends PagerAdapter implements
         this.list = list;
         this.device = device;
 
-        this.manager = manager;
     }
 
 
@@ -156,8 +154,7 @@ public class WF400AAdapter extends PagerAdapter implements
         setCustomViewListener();
         tccs = new ArrayList<ThreeColourCustom>();
 
-        adapter = new ThreeLvAdapter(context, tccs, handler, device, manager,
-                isAddNew);
+        adapter = new ThreeLvAdapter(context, tccs, handler, device, true, isAddNew);
         custom_lv.setAdapter(adapter);
         new Thread() {
             public void run() {
@@ -174,7 +171,7 @@ public class WF400AAdapter extends PagerAdapter implements
     private Handler h = new Handler() {
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
-            adapter = new ThreeLvAdapter(context, tccs, handler, device, manager, isAddNew);
+            adapter = new ThreeLvAdapter(context, tccs, handler, device, true, isAddNew);
             custom_lv.setAdapter(adapter);
         }
     };
@@ -214,13 +211,7 @@ public class WF400AAdapter extends PagerAdapter implements
                 Util.sendCommand(
                         LeyNew.CALL_7SAE,
                         new String[]{
-                                "1",
-                                "1_0_50_255_1.00_1.2_1.5",
-                                "1_0_255_34_1.00_1.0_1.1",
-                                "1_255_18_0_1.00_0.8_0.8",
-                                "0",
-                                "0",
-                        //更新到github..
+                                (tccs.get(position).getT_custom() - 1) + ""
                         },
                         device.getLamp().getL_sequence());
 
@@ -233,8 +224,11 @@ public class WF400AAdapter extends PagerAdapter implements
         public void onClick(View v) {
             Log.i("======", "" + tccs.size());
             if (tccs.size() < FinalClass.CUSTOM_SIZE) {
-                ThreeDialogFragment dialog = new ThreeDialogFragment(context, device, null, handler);
-                dialog.show(manager, "addNew");
+                // TODO: 2016/12/1/001
+               AddThreeCustomDialog dialog = new AddThreeCustomDialog(context, device, null, handler);
+                dialog.show();
+
+
             } else {
                 AddThreeCustomTipDialog dialog = new AddThreeCustomTipDialog(context);
                 dialog.show();
@@ -280,7 +274,7 @@ public class WF400AAdapter extends PagerAdapter implements
         sb_brightness.setProgress(0);
         sb_speed.setProgress(0);
         txt_brightness.setText("0%");
-        txt_speed.setText(" 0");
+        txt_speed.setText(" 0%");
     }
 
 

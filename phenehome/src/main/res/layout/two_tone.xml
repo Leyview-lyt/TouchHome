@@ -105,8 +105,8 @@
                     android:paddingRight="10dp"
                     android:paddingLeft="10dp"
                     android:progress="0"
-                    android:progressDrawable="@drawable/seekbar_style"
-                    android:thumb="@drawable/sliderbar" />
+
+                    />
            
         </LinearLayout>
 		    
@@ -165,8 +165,8 @@
                     android:paddingRight="10dp"
                     android:paddingLeft="10dp"
                     android:progress="0"
-                    android:progressDrawable="@drawable/seekbar_style"
-                    android:thumb="@drawable/sliderbar" />
+
+                     />
                 
         </LinearLayout>
            

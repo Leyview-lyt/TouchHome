@@ -48,12 +48,36 @@
             android:layout_alignParentEnd="true" />
     </RelativeLayout>
 
-     <FrameLayout 
-         android:id="@+id/home_ll_console"
-         android:layout_width="fill_parent"
-         android:layout_height="fill_parent">
-         
-     </FrameLayout>
-    
+     <!--<FrameLayout -->
+         <!--android:id="@+id/home_ll_console"-->
+         <!--android:layout_width="fill_parent"-->
+         <!--android:layout_height="fill_parent">-->
+     <!--</FrameLayout>-->
+    <FrameLayout
+        android:id="@+id/scene_console"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        >
+        <phonehome.leynew.com.phenehome.control.MyViewPager
+            android:id="@+id/plan_home_vp"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </phonehome.leynew.com.phenehome.control.MyViewPager>
+        <ImageButton
+            android:id="@+id/plan_vp_left"
+            android:layout_gravity="left|center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/arrow_l" />
+
+        <ImageButton
+            android:id="@+id/plan_vp_right"
+            android:layout_gravity="right|center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/arrow_r" />
+
+    </FrameLayout>
+
 
 </LinearLayout>

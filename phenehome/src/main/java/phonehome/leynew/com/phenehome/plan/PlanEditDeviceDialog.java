@@ -88,6 +88,7 @@ public class PlanEditDeviceDialog extends Dialog  {
 
 	private void init(){
 		save = (Button) findViewById(R.id.save_pd);
+		save.setVisibility(View.INVISIBLE);
 		gv = (GridView) findViewById(R.id.gridView0);     //
 		vp = (MyViewPager) findViewById(R.id.plan_home_vp);
 		left = (ImageButton) findViewById(R.id.plan_vp_left);
@@ -192,12 +193,12 @@ public class PlanEditDeviceDialog extends Dialog  {
 						if (lamp.getL_type().equals("WF500")) {
 							lamp.setL_sequence(lamp.getL_sequence().split("-")[0]);
 						}
-						
-						List<String[]> list = Util.sendCommandForResult(
-								"readstatus =", null, lamp.getL_sequence());
-						if (list.size() == 0){
-							Util.sendMessage(isSuccessHandler, null);
-						}
+						//读取状态
+//						List<String[]> list = Util.sendCommandForResult(
+//								"readstatus =", null, lamp.getL_sequence());
+//						if (list.size() == 0){
+//							Util.sendMessage(isSuccessHandler, null);
+//						}
 					};
 				}.start();
 				device.setLamp(lamp);
@@ -223,8 +224,7 @@ public class PlanEditDeviceDialog extends Dialog  {
 						) {
 					// $(R.id.plan_vp_left).setVisibility(View.GONE);
 					// $(R.id.plan_vp_right).setVisibility(View.GONE);
-					View view = LayoutInflater.from(context).inflate(
-							R.layout.homochromy, null);
+					View view = LayoutInflater.from(context).inflate(R.layout.homochromy, null);
 					views.add(view);
 					PlanWF400CAdapter c = new PlanWF400CAdapter(context, views, device, isUpdateHandler, pds);
 					vp.setAdapter(c);
@@ -250,7 +250,8 @@ public class PlanEditDeviceDialog extends Dialog  {
 					views.add(view2);
 					views.add(view3);
 					PlanWF400AAdapter a = new PlanWF400AAdapter(context, views, device,  null, isUpdateHandler, pds, vp);
-					vp.setOffscreenPageLimit(2);
+					// TODO: 2016/12/1/001 开始卡,还是后来卡 
+//					vp.setOffscreenPageLimit(2);
 					vp.setAdapter(a);
 				}
 
@@ -265,10 +266,6 @@ public class PlanEditDeviceDialog extends Dialog  {
 						device, isUpdateHandler, null);
 				vp.setAdapter(c);
 				is = true;
-				// }else {
-				// views.isEmpty()views.size()>0
-				System.out.println(views.size() + " =size()");
-
 				if (is) {
 					title_console.setText(context.getString(R.string.home_setting));
 					title_console.setTextColor(Color.WHITE);
@@ -279,29 +276,28 @@ public class PlanEditDeviceDialog extends Dialog  {
 		}
 	}
 	
-	private Handler isSuccessHandler = new Handler() {
-		public void handleMessage(Message msg) {
-			super.handleMessage(msg);
-			read_status.setVisibility(View.VISIBLE);
-			TimerTask task = new TimerTask() {
-				public void run() {
-					Util.sendMessage(readStatusHandler, null);
-				}
-			};
-			Timer timer = new Timer(true);
-			timer.schedule(task, 3000);//
-		};
-	};
-	
-	private Handler readStatusHandler = new Handler(){
-		@Override
-		public void handleMessage(Message msg) {
-			// TODO Auto-generated method stub
-			super.handleMessage(msg);
-			read_status.setVisibility(View.GONE);
-		}
-		
-	};
+//	private Handler isSuccessHandler = new Handler() {
+//		public void handleMessage(Message msg) {
+//			super.handleMessage(msg);
+//			read_status.setVisibility(View.VISIBLE);
+//			TimerTask task = new TimerTask() {
+//				public void run() {
+//					Util.sendMessage(readStatusHandler, null);
+//				}
+//			};
+//			Timer timer = new Timer(true);
+//			timer.schedule(task, 3000);//
+//		};
+//	};
+//
+//	private Handler readStatusHandler = new Handler(){
+//		@Override
+//		public void handleMessage(Message msg) {
+//			super.handleMessage(msg);
+//			read_status.setVisibility(View.GONE);
+//		}
+//
+//	};
 
 	private Handler isUpdateHandler = new Handler() {
 		@Override
@@ -312,7 +308,7 @@ public class PlanEditDeviceDialog extends Dialog  {
 			pds = (PlanDeviceStore) data.getSerializable("pds");
 			pds.setP_id(plan.get_id());   //
 			pds.setD_id(device.get_id()); //
-		//	save.setVisibility(View.VISIBLE);
+			save.setVisibility(View.VISIBLE);
 		}
 	};
 	

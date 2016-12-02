@@ -163,8 +163,8 @@ public class WF400BAdapter extends PagerAdapter implements OnClickListener,
         two_btn_warm_down.setOnClickListener(this);
         two_btn_warm_up.setOnTouchListener(this);
         two_btn_warm_down.setOnTouchListener(this);
-        two_sb_brs.setOnSeekBarChangeListener(this);
-        two_sb_warm.setOnSeekBarChangeListener(this);
+        two_sb_brs.setOnSeekBarChangeListener((VerticalSeekBar.OnSeekBarChangeListener) this);
+        two_sb_warm.setOnSeekBarChangeListener((VerticalSeekBar.OnSeekBarChangeListener) this);
         two_sb_brs.setOnTouchListener(new BrightnessAndColor());
         two_sb_warm.setOnTouchListener(new BrightnessAndColor());
     }

@@ -6,7 +6,7 @@
     android:background="@color/white"
       >
 
-    
+
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -21,96 +21,147 @@
 
         </LinearLayout>
 
-        <RelativeLayout
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
 
+       <LinearLayout
+           android:layout_marginBottom="@dimen/y5"
+           android:layout_above="@+id/center"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+           <TextView
+               android:id="@+id/textView1"
+               android:layout_width="@dimen/x100"
+               android:layout_height="match_parent"
+               android:gravity="center"
+
+               android:text="brightness"
+               android:textSize="20sp"
+                />
+
+           <TextView
+               android:id="@+id/textView2"
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:text=" : "
+               android:textSize="20sp"
+               android:gravity="center"
+               />
+
+
+
+           <SeekBar
+               android:id="@+id/three_model_sb_brightness"
+               android:layout_width="@dimen/x140"
+               android:layout_height="wrap_content"
+                />
+           <TextView
+               android:id="@+id/three_model_txt_brightness"
+               android:layout_width="@dimen/x50"
+               android:layout_height="match_parent"
+               android:text="100%"
+               android:textSize="20sp"
+               android:gravity="center"
+                />
+       </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/center"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_height="1dp"
+            android:layout_centerVertical="true"/>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/y5"
+            android:layout_below="@+id/center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="@string/brightness"
+                android:id="@+id/textView12"
+                android:layout_width="@dimen/x100"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="speed"
                 android:textSize="20sp"
-                android:layout_alignTop="@+id/textView2"
-                android:layout_alignParentStart="true" />
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" : "
-                android:textSize="20sp"
-                android:layout_above="@+id/three_model_sb_speed"
-                android:layout_toEndOf="@+id/textView1"
-                android:layout_margin="@dimen/x10"/>
-
-            <TextView
-                android:id="@+id/three_model_txt_brightness"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:text="100%"
-                android:textSize="20sp"
-                android:layout_alignBottom="@+id/three_model_sb_brightness"
-                android:layout_alignStart="@+id/three_model_txt_speed" />
-
-            <SeekBar
-                android:id="@+id/three_model_sb_brightness"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/textView2"
-                android:layout_toLeftOf="@+id/three_model_txt_brightness"
-                android:layout_toRightOf="@+id/textView2"
-                android:paddingLeft="15dp"
-                android:paddingRight="20dp"
-                android:progressDrawable="@drawable/seekbar_style"
-                android:thumb="@drawable/sliderbar" />
-
-            <SeekBar
-                android:layout_centerVertical="true"
-                android:id="@+id/three_model_sb_speed"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/three_model_sb_brightness"
-                android:layout_marginBottom="14dp"
-                android:layout_toLeftOf="@+id/three_model_txt_speed"
-                android:paddingLeft="15dp"
-                android:paddingRight="20dp"
-                android:progressDrawable="@drawable/seekbar_style"
-                android:thumb="@drawable/sliderbar" />
+                />
 
             <TextView
                 android:id="@+id/textView22"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/textView12"
-                android:layout_alignBottom="@+id/textView12"
-                android:layout_toRightOf="@+id/textView12"
+                android:layout_height="match_parent"
                 android:text=" : "
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:gravity="center"
+                />
 
-            <TextView
-                android:id="@+id/textView12"
-                android:layout_width="wrap_content"
+
+
+            <SeekBar
+                android:id="@+id/three_model_sb_speed"
+                android:layout_width="@dimen/x140"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/three_model_sb_speed"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="10dp"
-                android:text="@string/speed"
-                android:textSize="20sp" />
-
+                 />
             <TextView
                 android:id="@+id/three_model_txt_speed"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/three_model_sb_speed"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="10dp"
+                android:layout_width="@dimen/x50"
+                android:layout_height="match_parent"
                 android:text="100%"
-                android:textSize="20sp" />
-        </RelativeLayout>
-    </LinearLayout>
+                android:textSize="20sp"
+                android:gravity="center"
+                />
+        </LinearLayout>
+
+        <!--<LinearLayout-->
+            <!--android:layout_below="@+id/center"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--&gt;-->
+            <!--<TextView-->
+                <!--android:gravity="center"-->
+                <!--android:id="@+id/textView12"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:text="@string/speed"-->
+                <!--android:textSize="20sp" />-->
+            <!--<TextView-->
+                <!--android:gravity="center"-->
+                <!--android:id="@+id/textView22"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:text=" : "-->
+                <!--android:textSize="20sp" />-->
+
+            <!--<SeekBar-->
+                <!--android:id="@+id/three_model_sb_speed"-->
+                <!--android:layout_width="@dimen/x200"-->
+                <!--android:paddingLeft="@dimen/x10"-->
+                <!--android:paddingRight="@dimen/x10"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:progressDrawable="@drawable/seekbar_style"-->
+                <!--android:thumb="@drawable/sliderbar" />-->
+
+            <!--<TextView-->
+                <!--android:gravity="center"-->
+                <!--android:id="@+id/three_model_txt_speed"-->
+                <!--android:layout_width="50dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:text="100%"-->
+                <!--android:textSize="20sp"-->
+                <!--/>-->
+        <!--</LinearLayout>-->
+
+
+    </RelativeLayout>
+</LinearLayout>
 
